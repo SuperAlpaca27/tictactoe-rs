@@ -65,7 +65,6 @@ impl Board {
         }
         //Horizontal
         for i in (0..9).step_by(3) {
-            println!("{}", i);
             let check =
                 Board::check_slice(&[&self.board[i], &self.board[i + 1], &self.board[i + 2]]);
             if let Some(piece) = check {

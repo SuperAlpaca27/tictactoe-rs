@@ -7,6 +7,7 @@ fn clear_term() {
 }
 
 fn main() {
+    clear_term();
     'game: loop {
         let mut board = Board::new();
         let mut current_player = Piece::X;
@@ -29,6 +30,7 @@ fn main() {
                 }
             }
             if let Some(winner) = board.check_win() {
+                clear_term();
                 println!("{}", board);
                 match winner {
                     Piece::Empty => println!("It was a draw!"),
